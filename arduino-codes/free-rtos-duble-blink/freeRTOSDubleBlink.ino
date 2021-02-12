@@ -3,6 +3,8 @@
 #define led_1 2
 #define led_2 3
 
+int blinks_1, blinks_2;
+
 void setup() {
   Serial.begin(9600);
 
@@ -32,15 +34,17 @@ void setup() {
 void loop() {}
 
 void xTaskLed_1(void *pvParameters){
-  digitalWrite(led_1, HIGH);
-  delay(1000);
-  digitalWrite(led_1, LOW);
-  delay(1000);
+  digitalWrite(led_1, !digitalRead(led_1));
+  if(digitalRead(led_1) == HIGH){
+    blinks_1++;
+    Serial.print("PISCADAS LED 1: "); Serial.println(blinks_1);
+  }
 }
 
 void xTaskLed_2(void *pvParameters){
-  digitalWrite(led_2, HIGH);
-  delay(1000);
-  digitalWrite(led_2, LOW);
-  delay(1000);
+  digitalWrite(led_2, !digitalRead(led_2));
+  if(digitalRead(led_2) == HIGH){
+    blinks_1++;
+    Serial.print("PISCADAS LED 2: "); Serial.println(blinks_2);
+  }
 }
