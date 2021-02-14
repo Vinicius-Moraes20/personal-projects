@@ -1,10 +1,7 @@
 int n = 6;
 int movingAvarage[7][n];
 
-
-void setup() {
-	
-}
+void setup() {}
 
 void loop() {
     for(int i = 0; i < 7; i++) {
@@ -15,13 +12,13 @@ void loop() {
 
     //Leitura de dados na primeira coluna de movingAvarage
 
-    float Sum[7] = {0, 0, 0, 0, 0, 0, 0};
+    float sum[7] = {0, 0, 0, 0, 0, 0, 0};
 
     for (int i = 0; i < 7; i++) {
         for (int ii = 0; ii < n; ii++) {
-             moving_avarage[i] += valueAcgy[i][ii];
+             sum[i] += movingAvarage[i][ii];
         }
     }
 
-    for(int i = 0; i < 7; i++) moving_avarage[i] = moving_avarage[i] / n;
+    for(int i = 0; i < 7; i++) sum[i] = sum[i] / n;
 }
