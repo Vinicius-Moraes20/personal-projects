@@ -4,8 +4,8 @@
 
 void setup() {
 	pinMode(clk,   OUTPUT);  // |
-    pinMode(letch, OUTPUT);  // | Definindo pinos de saida
-    pinMode(data,  OUTPUT);  // |
+  pinMode(letch, OUTPUT);  // | Definindo pinos de saida
+  pinMode(data,  OUTPUT);  // |
 }
 
 void loop() {
