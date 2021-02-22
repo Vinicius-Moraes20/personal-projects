@@ -17,10 +17,9 @@
 
 class shift_register {
     public: 
-        new_register(int clk, int letch, int data);
-        void register_out(string dataValue[3]);
+        shift_register(int clk, int letch, int data);
     private:
-        int _clk, _letch, _clock, _dataValue;
+        int _clk, _letch, _clock;
 };
 
 

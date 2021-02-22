@@ -1,6 +1,6 @@
 /*
 
-    shift_regisster.cpp
+    shift_register.cpp
     Nome da Biblioteca: shift_register.h
     Autor: Tec. Vinicius Moraes
     Versão: 1.0
@@ -12,9 +12,8 @@
 
 #include "Arduino.h"
 #include "shift_register.h"
-#include "string.h"
 
-shift_register::new_register(int clk, int letch, int data) {
+shift_register::shift_register(int clk, int letch, int data) {
     pinMode(clk,   OUTPUT);
     pinMode(letch, OUTPUT);
     pinMode(data,  OUTPUT);
@@ -22,13 +21,4 @@ shift_register::new_register(int clk, int letch, int data) {
     _clk = clk;
     _letch = letch;
     _data = data;
-}
-
-void shift_register::register_out(int dataValue) {
-    _dataValue = strcat("0x", dataValue);
-    shiftOut(_data, _clk, LSBFIRST, _dataValue);
-    digitalWrite(_letch, LOW );
-    digitalWrite(_letch, HIGH);
-    digitalWrite(_letch, LOW );
-    
 }
