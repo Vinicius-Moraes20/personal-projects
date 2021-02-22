@@ -1,0 +1,2 @@
+shift_register	KEYWORD1
+register_out	KEYWORD2

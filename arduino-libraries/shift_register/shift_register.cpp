@@ -18,7 +18,14 @@ shift_register::shift_register(int clk, int letch, int data) {
     pinMode(letch, OUTPUT);
     pinMode(data,  OUTPUT);
     
-    _clk = clk;
+    _clk   = clk;
     _letch = letch;
-    _data = data;
-}
+    _data  = data;
+};
+
+void shift_register::register_out(int dataValue) {
+    shiftOut(_data, _clk, LSBFIRST, dataValue);
+    digitalWrite(_letch, LOW);
+    digitalWrite(_letch, HIGH);
+    digitalWrite(_letch, LOW);
+};

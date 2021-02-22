@@ -10,17 +10,16 @@
 
 */
 
-#ifndef shift_register
-#define shift_register
+#ifndef shift_register_h
+#define shift_register_h
 
 #include "Arduino.h"
 
 class shift_register {
-    public: 
+    public:
         shift_register(int clk, int letch, int data);
+        void register_out(int dataValue);
     private:
-        int _clk, _letch, _clock;
+        int _clk, _letch, _data;
 };
-
-
 #endif
