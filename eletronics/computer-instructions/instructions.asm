@@ -1,0 +1,13 @@
+NOP     0000            ---               ---             ---
+LDA     0001          IRO,MAI           RMO,ACI           ---
+LDI     0010          IRO,ACI             ---             ---
+STA     0011          IRO,MAI           ACO,RMI           ---
+ADD     0100          IRO,MAI           RMO,BRI         ALU,ACI
+SUB     0101          IRO,MAI           RMO,BRI       ALU,ACI,SUB
+AND     0110          IRO,MAI           RMO,BRI       ALU,ACI,AL0
+OR      0111          IRO,MAI           RMO,BRI       ALU,ACI,AL1
+XOR     1000          IRO,MAI           RMO,BRI     ALU,ACI,AL1,AL0
+NOT     1001    ALU,ACI,AL1,AL0,NOT       ---             ---
+JMP     1010          IRO,JMP             ---             ---
+OUT     1110          ACO,ORI             ---             ---
+HLT     1111            HLT               ---             ---
