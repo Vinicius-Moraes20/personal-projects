@@ -1,0 +1,6 @@
+nome = input("Digite seu nome completo: ")
+print("Letras maiusculas> {}".format(nome.upper()))
+print("Letras minusculas> {}".format(nome.lower()))
+nDiv = nome.split()
+print("Quantidade de letras ao todo> {}".format(len(nome)))
+print("Quantidade de letras do primeiro nome> {}".format(len(nDiv[0])))
